@@ -18,7 +18,7 @@ def saludo(request):
     temas_del_curso = ["Plantillas","Modelos","Formularios","Vistas","Despliegue"]
     #temas_del_curso = []
 
-    p1 = Persona("Marcelo", "KKC")
+    p1 = Persona("Marcelo", "Cacace")
 
     fecha_actual = datetime.datetime.now()
 
