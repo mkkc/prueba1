@@ -18,7 +18,7 @@ def saludo(request):
     temas_del_curso = ["Plantillas","Modelos","Formularios","Vistas","Despliegue"]
     #temas_del_curso = []
 
-    p1 = Persona("MMarcelo", "Cacace")
+    p1 = Persona("Federico", "Cacace")
 
     fecha_actual = datetime.datetime.now()
 
@@ -40,7 +40,8 @@ def saludo(request):
 
 # 2° Vista
 def despedida(request):
-    return HttpResponse("Chau Marcelo, nos vemos luego... Django")
+    p1 = Persona("Federico", "Cacace")
+    return HttpResponse("Chau " + p1 & ", nos vemos luego... Django")
 
 # 3° Vista
 def dameFecha(request):
@@ -63,7 +64,7 @@ def dameFecha(request):
 # 4° Vista
 def calculaEdad(request, edad, agno):
     #edad_actual = 18
-    periodo= agno - 2019
+    periodo= agno - 2020
     #edad_futura = edad_actual + periodo
     edad_futura = edad + periodo
     documento = """<html><body><h2>En el año %s tendrás %s</h2></body></html>""" % (agno, edad_futura)
