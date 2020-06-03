@@ -41,7 +41,7 @@ def saludo(request):
 # 2° Vista
 def despedida(request):
     p1 = Persona("Federico", "Cacace")
-    return HttpResponse("Chau " + p1 & ", nos vemos luego... Django")
+    return HttpResponse("Chau " + p1.nombre & ", nos vemos luego... Django")
 
 # 3° Vista
 def dameFecha(request):
