@@ -36,7 +36,7 @@ def saludo(request):
     #documento = plt.render(ctx)
     #documento = doc_externo.render({"persona":p1, "momento_actual":fecha_actual, "temas": temas_del_curso})
 
-    return render(request,"plantilla.html",{"persona":p1, "momento_actual":fecha_actual, "temas": temas_del_curso})
+    return render(request,"miplantilla.html",{"persona":p1, "momento_actual":fecha_actual, "temas": temas_del_curso})
 
 # 2° Vista
 def despedida(request):
