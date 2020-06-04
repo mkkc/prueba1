@@ -60,7 +60,7 @@ ROOT_URLCONF = 'prueba.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(PROJECT_ROOT,'templates')],
+        'DIRS': [os.path.join(PROJECT_ROOT,'plantillas')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
