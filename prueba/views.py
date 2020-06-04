@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 import datetime
-from django.template import Template, Context, loader
+from django.shortcuts import render
 
 class Persona(object):
     def __init__(self, nombre, apellido):
@@ -28,15 +28,15 @@ def saludo(request):
 
     #doc_externo.close()
 
-    doc_externo = loader.get_template('miplantilla.html')
+    #doc_externo = loader.get_template('miplantilla.html')
 
     #ctx = Context({"nombre_persona":nombre, "apellido_persona":apellido, "momento_actual":fecha_actual})
     #ctx = Context({"persona":p1, "momento_actual":fecha_actual, "temas": temas_del_curso})
 
     #documento = plt.render(ctx)
-    documento = doc_externo.render({"persona":p1, "momento_actual":fecha_actual, "temas": temas_del_curso})
+    #documento = doc_externo.render({"persona":p1, "momento_actual":fecha_actual, "temas": temas_del_curso})
 
-    return HttpResponse(documento)
+    return render(request,"plantilla.html",{"persona":p1, "momento_actual":fecha_actual, "temas": temas_del_curso})
 
 # 2° Vista
 def despedida(request):
